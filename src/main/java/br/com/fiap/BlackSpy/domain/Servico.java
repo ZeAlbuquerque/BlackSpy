@@ -1,6 +1,8 @@
 package br.com.fiap.BlackSpy.domain;
 
+import br.com.fiap.BlackSpy.domain.enums.StatusServico;
 import br.com.fiap.BlackSpy.domain.enums.TipoServico;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,11 +14,13 @@ import java.util.Calendar;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 public class Servico {
 
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonIgnore
     private Integer id;
 
     @Column(nullable = false)
@@ -29,9 +33,9 @@ public class Servico {
     @Column(nullable = false)
     private Calendar dataFim;
 
-    @ManyToOne
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private StatusServico statusServico;
 
     @ManyToOne
     @JoinColumn(name = "id_drone")

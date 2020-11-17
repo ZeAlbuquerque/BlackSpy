@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CNPJ;
+import org.hibernate.validator.constraints.br.CPF;
 
 import javax.persistence.*;
 
@@ -13,6 +14,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@Entity
 public class Usuario {
 
     @Id
@@ -29,7 +31,7 @@ public class Usuario {
     @Column(nullable = false,unique = true)
     private String login;
 
-    @CNPJ
+    @CPF
     @Column(unique = true, nullable = false)
     private String cpf;
 

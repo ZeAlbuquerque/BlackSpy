@@ -11,6 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Table
+@Entity
 public class Fabricante {
 
     @Id

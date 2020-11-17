@@ -58,4 +58,9 @@ public class UsuarioService implements UserDetailsService {
 
     }
 
+    public Usuario buscarPeloId(Integer id){
+        return repository.findById(id)
+                .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado na base de dados"));
+    }
+
 }
