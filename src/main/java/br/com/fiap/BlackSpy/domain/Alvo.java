@@ -24,5 +24,5 @@ public class Alvo {
     private String nome;
 
     @Column
-    private Byte[] foto;
+    private String foto;
 }

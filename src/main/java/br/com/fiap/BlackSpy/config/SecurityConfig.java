@@ -46,13 +46,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/api/usuarios/**")
-                .permitAll()
-                .antMatchers("/swagger-ui.html")
-                .permitAll()
-                .antMatchers("/v2/**")
-                .permitAll()
-                .anyRequest().hasRole("USER")
+                .antMatchers("/api/**")
+                .hasRole("USER")
+                .anyRequest().permitAll()
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().addFilterBefore(jwtFilter(), UsernamePasswordAuthenticationFilter.class);

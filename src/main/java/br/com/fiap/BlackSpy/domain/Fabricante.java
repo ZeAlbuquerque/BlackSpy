@@ -3,6 +3,7 @@ package br.com.fiap.BlackSpy.domain;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CNPJ;
 
 import javax.persistence.*;
@@ -12,6 +13,7 @@ import javax.persistence.*;
 @Builder
 @Table
 @Entity
+@NoArgsConstructor
 public class Fabricante {
 
     @Id

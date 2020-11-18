@@ -52,4 +52,5 @@ public class AlvoService {
         return repository.findById(id)
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,"Alvo não encontrado"));
     }
+
 }

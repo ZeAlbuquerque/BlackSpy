@@ -30,7 +30,7 @@ public class Servico {
     @Column(nullable = false)
     private Calendar dataDespacho;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private Calendar dataFim;
 
     @Column(nullable = false)

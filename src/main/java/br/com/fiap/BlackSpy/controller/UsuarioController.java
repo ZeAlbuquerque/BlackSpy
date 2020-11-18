@@ -6,6 +6,7 @@ import br.com.fiap.BlackSpy.domain.dto.TokenDto;
 import br.com.fiap.BlackSpy.jwt.JwtService;
 import br.com.fiap.BlackSpy.service.UsuarioService;
 import br.com.fiap.BlackSpy.service.exeption.SenhaInvalidaException;
+import io.swagger.annotations.Api;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -16,6 +17,8 @@ import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 
+
+@Api(value = "API de usuários")
 @RestController
 @RequestMapping("/api/usuarios")
 @RequiredArgsConstructor
