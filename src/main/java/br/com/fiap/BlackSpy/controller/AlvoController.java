@@ -18,7 +18,7 @@ public class AlvoController {
     @Autowired
     private AlvoService alvoService;
 
-    @ApiOperation(value = "Cadastra novo alvo")
+    @ApiOperation(value = "Cadastra novo alvo e automaticamente cria uma serviço de busca para este alvo")
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Alvo cadastar(@RequestBody @Valid Alvo alvo){

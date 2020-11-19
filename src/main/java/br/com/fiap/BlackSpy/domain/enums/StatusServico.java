@@ -4,6 +4,7 @@ public enum StatusServico {
 
     EM_ANDAMENTO,
     CANCELADO,
-    AGUARDANDO_DRONE
+    AGUARDANDO_DRONE,
+    CONCLUIDO
 
 }

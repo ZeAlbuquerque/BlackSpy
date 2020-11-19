@@ -1,5 +1,6 @@
 package br.com.fiap.BlackSpy.domain;
 
+import br.com.fiap.BlackSpy.domain.enums.NivelPericulosidade;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,4 +26,8 @@ public class Alvo {
 
     @Column
     private String foto;
+
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private NivelPericulosidade nivelPericulosidade;
 }
